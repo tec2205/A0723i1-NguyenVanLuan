@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var inputLy, inputHoa, inputSinh;
+        inputLy= prompt("Nhập Điểm Lý");
+        inputHoa= prompt("Nhập Điểm Hoá");
+        inputSinh= prompt("Nhập Điểm Sinh");
+    var Ly = parseInt(inputLy);
+    var Hoa= parseInt(inputHoa);
+    var Sinh= parseInt(inputSinh);
+    var Tong = Ly + Hoa + Sinh;
+    var TBC = Tong / 3;
+    document.write("Tổng 3 môn là: " + Tong + "</br>" );
+    document.write("TBC 3 môn là: " + TBC );
+</script>
+
+</body>
+</html>

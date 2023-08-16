@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    </br>
+    <button onclick="Cộng()">Addition(+)</button>
+    <button onclick="Trừ()">Subtraction(-)</button>
+    <button onclick="Nhân()">Multiplication(X)</button>
+    <button onclick="Chia()">Division(/)</button>
+    </br>
+    <p>Result:</p>
+    <div id="ket qua"></div>
+    <script>
+        function Cộng() {
+            var number1 = document.getElementById("num1").value;
+            var number2 = document.getElementById("num2").value;
+            var Result = Number(number1) + Number(number2);
+            document.getElementById("ket qua").innerHTML=Result;
+        }
+        function Trừ() {
+            var number1 = document.getElementById("num1").value;
+            var number2 = document.getElementById("num2").value;
+            var Result = Number(number1) - Number(number2);
+            document.getElementById("ket qua").innerHTML=Result;
+        }
+        function Nhân() {
+            var number1 = document.getElementById("num1").value;
+            var number2 = document.getElementById("num2").value;
+            var Result = Number(number1) * Number(number2);
+            document.getElementById("ket qua").innerHTML=Result;
+        }
+        function Chia() {
+            var number1 = document.getElementById("num1").value;
+            var number2 = document.getElementById("num2").value;
+            var Result = Number(number1) / Number(number2);
+            document.getElementById("ket qua").innerHTML=Result;
+        }
+    </script>
+</body>
+</html>
