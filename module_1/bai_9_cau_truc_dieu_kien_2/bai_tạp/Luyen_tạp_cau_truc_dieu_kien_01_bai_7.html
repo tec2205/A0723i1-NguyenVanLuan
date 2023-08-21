@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Tính cước điện thoại</h1>
+    <label for="sp">Nhập thời lượng gọi (phút):</label>
+    <input type="number" id="sp" min="0">
+    <br>
+    <button onclick="kiem_tra()">Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function kiem_tra() {
+            let sophut = document.getElementById("sp").value;
+            let phicodinh = 25;
+            let phi = 0;
+            let tong;
+            if ( sophut > 200) {
+                phi = (sophut - 200) * 200 + 150 * 400 + 50 * 600;
+            } else if (sophut > 50) {
+                phi = (sophut - 50) * 400 + 50 * 600;
+            } else {
+                phi = sophut * 600;
+            }
+            tong = phi * 0.01 + phicodinh;
+            document.getElementById('result').innerHTML="Tổng tiền bạn phải nộp là " + tong +" VNĐ" ;
+        }
+    </script>
+</body>
+</html>

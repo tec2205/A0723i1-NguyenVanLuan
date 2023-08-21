@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Kiểm tra số âm hay dương</h1>
+    <label>Nhập số nguyên:</label>
+    <input type="number" id="num">
+    <button onclick="kiem_tra()">Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function kiem_tra() {
+            var a = document.getElementById("num").value;
+            var result ="";
+            if (a >0) {
+                result = "Là số dương"
+            } else {
+                result = "Là số âm"
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

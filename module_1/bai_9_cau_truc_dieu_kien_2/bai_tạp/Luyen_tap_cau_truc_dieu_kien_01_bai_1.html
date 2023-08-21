@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Kiểm tra a chia b</h1>
+    <label> Nhập số a: </label>
+    <input type="text" id="num1">
+    </br>
+    <label> Nhập số b: </label>
+    <input type="text" id="num2">
+    </br>
+    <button onclick="kiem_tra()">Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function kiem_tra() {
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            var result = "";
+            if(a%b==0) {
+                result = "a chia hết cho b"
+            } else {
+                result = "a không chia hết cho b"
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

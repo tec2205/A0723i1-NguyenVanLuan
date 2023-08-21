@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Kiểm tra tuổi</h1>
+    <label>Nhập số tuổi:</label>
+    <input type="number" id="sotuoi">
+    <button onclick="kiem_tra()">Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function kiem_tra() {
+            var tuoi = document.getElementById("sotuoi").value;
+            var result = "";
+            if (tuoi >= 16) {
+                result = "Đủ tuổi học lớp 10"
+            } else {
+                result = "Không đủ tuổi học lớp 10"
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
