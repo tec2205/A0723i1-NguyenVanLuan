@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>Tính thuế thu nhập cá nhân</h1>
+  <label for="thu_nhap">Nhập thu nhập cá nhân(triệu VNĐ): </label>
+  <input type="number" id="thu_nhap">
+  <button onclick="tinh()">Tính</button>
+  <p id="result"></p>
+  <script>
+    function tinh() {
+      let a = document.getElementById("thu_nhap").value;
+      const muc1 = 5/100;
+      const muc2 = 10/100;
+      const muc3 = 15/100;
+      const muc4 = 20/100;
+      const muc5 = 25/100;
+      let result = "";
+      if (a<=5) {
+        result = a * muc1;
+      } else if(a>5 && a<=10) {
+        result = a * muc2;
+      } else if(a>10 && a<=18) {
+        result = a * muc3;
+      } else if(a>18 && a<=32) {
+        result = a * muc4;
+      } else if(a>32) {
+        result = a * muc5;
+      }
+      document.getElementById("result").innerHTML =`Số thuế phải trả là ${result} triệu VNĐ`;
+    }
+  </script>
+</body>
+</html>
