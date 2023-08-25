@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        let result = "";
+        for (let i = 1; i < 100 ; i++) {
+            result += i + "<br>";
+            if ( i == 99) {
+                result += i + "<br>" +"Hoàn Thành";}
+        }
+        document.getElementById("result").innerHTML = result;
+    </script>
+</body>
+</html>

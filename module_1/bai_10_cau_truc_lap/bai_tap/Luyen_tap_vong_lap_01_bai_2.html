@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function check(nhietdo) {
+            while (nhietdo<20 || nhietdo>100){
+                if(nhietdo<20){
+                    alert("Xin tý nhiệt")
+                    nhietdo = Number(prompt("Nhập vào nhiệt độ"))
+                }else if(nhietdo>100){
+                    alert("Giảm nhiệt giảm nhiệt")
+                    nhietdo = Number(prompt("Nhập vào nhiệt độ"))
+                }
+            }
+            alert("Nhiệt độ bình thường")
+        }
+        let nhietdo = parseInt(prompt("Nhập nhiệt độ hiện tại vào đây"));
+        check(nhietdo);
+    </script>
+</body>
+</html>

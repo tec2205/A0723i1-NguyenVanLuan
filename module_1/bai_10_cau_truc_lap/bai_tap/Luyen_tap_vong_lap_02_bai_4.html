@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>In hình chữ nhật</h1>
+    <script>
+        let a = " "
+        for (let i = 0; i <= 6; i++){
+            for (let j = 0;j <= 20; j++){
+                if (i === 0 || i === 6){
+                    document.write("<a>*<a>")
+                }else{
+                    document.write("<a style='color: white'>*<a>")
+                }
+                if (j == 0 || j== 20) {
+                    document.write("<a>*<a>")
+                }
+            }
+            document.write("<br>")
+        }
+    </script>
+</body>
+</html>
