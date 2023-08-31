@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>kiểm tra và xoá V</h1>
+    <button onclick="check()">Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        let result = document.getElementById("result");
+        function check() {
+            let V = parseInt(prompt("Nhập số nguyên V:"));
+            let numbers = new Array(10);
+            for (let i = 0; i < numbers.length; i++) {
+                numbers[i] = parseInt(prompt("Nhập số thứ " + (i + 1) + ":"));
+            }
+            for (let i = 0; i < numbers.length; i++) {
+                if (numbers[i] === V) {
+                    numbers.splice(i,1);
+                    numbers.push(0);
+                    result.innerHTML = `V(${V}) có trong mảng và đã được xoá. Mảng mới: ${numbers.join(", ")}`;
+                    break;
+                } else {
+                    result.innerHTML = `V(${V}) không có trong mảng`;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

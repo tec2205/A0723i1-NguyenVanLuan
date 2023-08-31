@@ -12,29 +12,57 @@
     <p id="result"></p>
     <script>
       function check() {
-        let number = document.getElementById("so_luong").value;
-        let count = 0;
-        let countsnt = 0;
-        let N = 2;
-        let result;
-        for(N ; N < 1000000000000 ; N++ ) {
-            if(countsnt < number) {
-              for (let i = 1 ; i <= N ; i++) {
-                if (N % i === 0 ){
-                  count += 1;
-                }
+          let number = parseInt(document.getElementById("so_luong").value);
+          let count = 0;
+          let countsnt = 0;
+          let N = 2;
+          let result = '';
+          for (N; true; N++) {
+              if (countsnt < number) {
+                  for (let i = 1; i <= N; i++) {
+                      if (N % i === 0) {
+                          count += 1;
+                      }
+                  }
+                  if (count === 2) {
+                      result += `${N} <br>`;
+                      countsnt += 1;
+                  }
+                  count = 0;
+              } else {
+                  break;
               }
-              if (count === 2) {
-                result += `${N} <br>` ;
-                countsnt += 1;
-              }
-              count = 0;
-            } else {
-                break;
-            }
-        }
-        document.getElementById("result").innerHTML = result;
+          }
+          document.getElementById("result").innerHTML = result;
       }
+      //   Dưới đây là bài thầy thêm
+      //     for (let i = 2; true; i++){
+      //         if(count === number){
+      //             break;
+      //         }
+      //         if(checkNumber(i)){
+      //             console.log(i)
+      //             result += `${i} <br>` ;
+      //             count++;
+      //         }
+      //     }
+      //     document.getElementById("result").innerHTML = result;
+      // }
+      //
+      //
+      // function checkNumber(number){
+      //       let flat = true;
+      //       if(number !== 2){
+      //           for (let i = 2; i <= Math.sqrt(number); i++){
+      //               if(number % i === 0){
+      //                   flat = false
+      //               }
+      //           }
+      //       }
+      //       return flat
+      // }
+
+
     </script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Kiểm tra số lớn nhất và vị trí số đó trong mảng 10 số được nhập vào</h1>
+    <button onclick="check()">Check</button>
+    <p id="result"></p>
+    <script>
+        function check() {
+            let result = 0;
+            let numbers = new Array(10);
+            for (let i = 0; i < numbers.length; i++) {
+                numbers[i] = parseInt(prompt("Nhập số thứ " + (i + 1) + ":"));
+                if (numbers[i] > numbers[result]) {
+                    result = i ;
+                }
+            }
+            document.getElementById("result").innerHTML = `Phần tủ lớn nhất là ${numbers[result]} và vị trí của nó là số thứ ${result +1} nhập vào` ;
+        }
+    </script>
+</body>
+</html>

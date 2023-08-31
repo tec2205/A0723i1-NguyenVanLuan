@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <label for="en">en :</label>
+  <input type="text" value="" id="en">
+  <input type="button" value="Translate" onclick="trans()">
+  <p id="result"><br></p>
+  <script>
+    let result = document.getElementById("result");
+    function trans() {
+      let input = document.getElementById("en").value;
+      let EN = ["dog", "cat", "mouse"];
+      let VI = ["chó", "mèo", "chuột"];
+      for (let i = 0; i < EN.length; i++) {
+        if (input === EN[i]) {
+          result.innerHTML = `${input} ---> ${VI[i]}`
+          break;
+        } else {
+          result.innerHTML = `no data`
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Đếm số nguyên âm</h1>
+    <button onclick="check()">Check</button>
+    <p id="result"></p>
+    <script>
+        let result = document.getElementById("result")
+        function check() {
+            let count = 0;
+            let n = parseInt(prompt('Số phần tử của mảng là :'));
+            let numbers = new Array(n);
+            for (let i = 0; i < n; i++) {
+                numbers[i] = parseInt(prompt("Nhập số thứ " + (i + 1) + ":"));
+                if (numbers[i] < 0) {
+                    count++;
+                    result.innerHTML = "Có"  +count+  "số nguyên âm";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

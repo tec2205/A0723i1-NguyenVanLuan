@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Đảo ngược các phần tử trong mảng số nguyên</h1>
+    <button onclick="rev()">Đảo</button>
+    <p id="result"></p>
+    <script>
+        let result = document.getElementById("result")
+        function rev() {
+            let n = parseInt(prompt('Sô phần tử của mảng là :'));
+            let numbers = new Array(n);
+            for (let i = 0; i < n; i++) {
+                numbers[i] = parseInt(prompt("Nhập số thứ " + (i + 1) + ":"));
+                result.innerHTML = numbers.reverse().join(" ") ;
+            }
+        }
+</script>
+</body>
+</html>

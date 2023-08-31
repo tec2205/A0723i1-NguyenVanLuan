@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Kiểm tra trong 10 số nhập vào có bao nhiêu số lớn hơn 10</h1>
+    <button onclick="check()">Check</button>
+    <p id="result"></p>
+    <script>
+    function check() {
+        let count = 0;
+        let numbers = new Array(10);
+        for (let i = 0; i < numbers.length; i++) {
+            numbers[i] = parseInt(prompt("Nhập số thứ " + (i + 1) + ":"));
+            if (numbers[i] >= 10) {
+                count++;
+            }
+        }
+        document.getElementById("result").innerHTML = "Số lượng số nguyên lớn hơn hoặc bằng 10 là " + count;
+    }
+    </script>
+</body>
+</html>

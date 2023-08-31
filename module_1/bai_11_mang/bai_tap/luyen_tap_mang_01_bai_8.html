@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Sắp xếp mangr theo thứ tự giảm dần</h1>
+    <button onclick="check()">Xếp</button>
+    <p id="result"></p>
+    <script>
+        let result = document.getElementById("result")
+        function check() {
+            let arr = new Array(10);
+            for (let i = 0; i < arr.length; i++) {
+                arr[i] = parseInt(prompt("Nhập số thứ " + (i + 1) + ":"));
+            }
+            arr.sort((a, b) => b - a);
+            result.innerHTML = "Mảng đã sắp xếp giảm dần: " + arr.join(" ") ;
+        }
+    </script>
+</body>
+</html>
