@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="Bất đầu" name="" id="" onclick="swapArr()">
+    <script>
+        function swapArr(){
+            let number = parseInt(prompt("Nhập số phần tử của mảng"));
+            let arr1 = new Array(number);
+            let arr2 = new Array(number);
+            for (let i = 0, j = number-1; i < number, j >= 0; i++,j--) {
+                arr1[i] = parseInt(prompt("Nhập vào phần tử " + (i+1)));
+                arr2[j] = arr1[i];
+            }
+            console.log(arr1);
+            console.log(arr2);
+            document.write("Mảng bạn vừa nhập là: " + arr1);
+            document.write("Mảng sau khi đảo ngược: " + arr2);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    var mang = prompt("Nhập vào một mảng");
+    var kitu = prompt("Nhập vào một kí tự: ");
+    function check(mang,kitu){
+      let count = 0;
+      for (let i = 0; i < mang.length ; i++){
+        if (kitu === mang[i]){
+          count++;
+        }else{
+          return -1;
+        }
+        return count;
+      }
+    }
+    alert(check(mang,kitu))
+  </script>
+</body>
+</html>

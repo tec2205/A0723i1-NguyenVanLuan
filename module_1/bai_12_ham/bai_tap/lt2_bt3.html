@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let number = parseInt(prompt("Nhập vào một số"));
+        function giaithua(number){
+            let x = 1;
+            for(let i = 1 ; i <= number ; i++){
+                x *= i;
+            }
+            return x;
+        }
+        alert("Giai thừa của số đó là: " + giaithua(number));
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    var sao1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
+    var sao2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major','Leo'];
+    function timsao(sao){
+      let index=sao1.indexOf(sao);
+      if ( index!== -1){
+        return sao2[index];
+      }else{
+        return ("Không tìm thấy ngôi sao nào:");
+      }
+    }
+    let sao = prompt(" Nhập tên ngôi sao");
+    let result=timsao(sao);
+    alert(result);
+</script>
+</body>
+</html>
