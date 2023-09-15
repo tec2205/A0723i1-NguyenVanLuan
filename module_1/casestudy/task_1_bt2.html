@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check (){
+        let char = prompt("nhập ký tự để check");
+        if ('ouiaeOUIAE'.indexOf(char) !== -1 ) {
+            alert (char + 'là phụ âm');
+        } else if (char >= 'a' && char <= 'z' || char >= 'A' && char <= 'Z'){
+            alert (char + 'là nguyên âm');
+        } else {
+            alert (char + 'không là phụ âm cũng không là nguyên âm')
+        }
+    }
+    check()
+</script>
+</body>
+</html>

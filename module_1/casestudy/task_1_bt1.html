@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let luong = parseInt(prompt('Nhập số lương'));
+  let luong_rong = 0 ;
+  function check() {
+    if (luong >= 15000000) {
+        luong_rong = luong * (15/100);
+    } else if (luong >= 7000000 && luong <15000000){
+        luong_rong = luong * (10/100);
+    }else if (luong < 700000) {
+        luong_rong = luong * (5 / 100);
+    }
+    alert("Lương ròng là" + luong_rong)
+  }
+  check()
+</script>
+</body>
+</html>
