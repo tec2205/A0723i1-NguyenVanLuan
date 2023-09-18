@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    const a = parseInt(prompt("muốn mảng có mấy phần tử thì nhập xuống dưới"));
+    function tinh(a){
+      let arr = new Array(a);
+      let out = new Array(a);
+      for (let i = 0; i < a; i++) {
+        arr[i] =parseFloat(prompt("Nhập vào phần tử thứ " + (i + 1) + " :" ))
+      }
+      for (let i = 0; i < a; i++){
+        out[i] = 0;
+        for (let j = 0; j <= i; j++) {
+          out[i] += arr[j]
+        }
+      }
+      return out;
+    }
+    tinh(a);
+    alert(tinh(a));
+
+  </script>
+</body>
+</html>

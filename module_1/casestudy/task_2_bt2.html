@@ -7,17 +7,14 @@
 <body>
     <script>
         function run() {
-            let h = parseFloat(prompt("Nhập chiều cao (h) :"))
-            if (Number.isInteger(h) && h > 0){
                 document.write("<center>")
-                for ( let i = 1;i <= h; i++){
+                for ( let i = 1;i <= 5; i++){
                     for ( let j = 1;j <= 2*i-1; j++){
                             document.write("*");
                     }
                     document.write("<br>")
                 }
                 document.write("</center>")
-            } else alert("Chiều cao phải là số nguyên dương ")
         } run()
     </script>
 </body>
