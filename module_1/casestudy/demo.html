@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findMin(arr) {
+        let min = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+
+    let arr = [];
+    for (let i = 1; i <= 9; i++) {
+        arr.push(parseInt(prompt("Nhập phần tử thứ " + i + ": ")));
+    }
+
+    // Tìm phần tử nhỏ nhất trong mảng
+    let min = findMin(arr);
+
+    // In ra phần tử nhỏ nhất trong mảng
+    alert("Phần tử nhỏ nhất trong mảng là: " + min);
+</script>
+</body>
+</html>

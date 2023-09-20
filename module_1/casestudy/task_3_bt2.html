@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function check () {
+            let a = parseInt(prompt('Nhập số phần tử mảng A'));
+            let b = parseInt(prompt('Nhập số phần tử mảng B'));
+            let arrA = [];
+            let arrB = [];
+            let arrC = []
+            for (let i = 0; i < a; i++) {
+                arrA[i] = +prompt('nhập phần tử thứ' + (i + 1) + 'của mảng A')
+            }
+            for (let j = 0; j < b; j++) {
+                arrB[j] = +prompt('nhập phần tử thứ' + (j + 1) + 'của mảng B')
+
+                if (arrB[j] !== arrA[j]) {
+                    arrC.push(arrB[j])
+                } else {
+                    break;
+                }
+            }
+            document.write('các phần tử có ở mảng B mà không có ở mảng A là: ' + arrC);
+        }
+        check();
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+      function check() {
+          let a = parseInt(prompt('Nhập số lượng chỉ số của phân số muốn check'));
+          let max = arr[0];
+          for (let i = 0; i < a; i++) {
+              arr[i] = +prompt('Nhập chỉ số của phân số thứ ' + (i + 1));
+              if (arr[i] < max) {
+                  max = arr[i]
+                  alert('Chỉ số phân số lớn nhất là: ' + max);
+              }
+          }
+      }
+      check();
+  </script>
+</body>
+</html>
