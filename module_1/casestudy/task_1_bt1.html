@@ -6,17 +6,19 @@
 </head>
 <body>
 <script>
-  let luong = parseInt(prompt('Nhập số lương'));
-  let luongRong = 0 ;
   function check() {
+      let luong = parseInt(prompt('Nhập số lương'));
+      let thue = 0;
     if (luong >= 15000000) {
-        luongRong = luong * (15/100);
+        thue = luong * (15/100);
     } else if (luong >= 7000000){
-        luongRong = luong * (10/100);
+        thue = luong * (10/100);
     }else if (luong < 700000) {
-        luongRong = luong * (5 / 100);
+        thue = luong * (5 / 100);
     }
-    alert("Lương ròng là" + luongRong)
+      let luongRong = luong - thue;
+      document.write("Lương ròng là " + luongRong + "<br>")
+      document.write("Thuế phải trả là " + thue)
   }
   check()
 </script>
