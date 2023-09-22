@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+      let a = prompt("Nhập xâu ký tự:");
+      function demKytukhacnhau(a) {
+          let b = new Set(a); // dùng set để lưu ký tự k trùng lặp
+          let count = b.size;
+          document.write("Có " + count + " ký tự khác nhau là " + Array.from(b).join(", ")); //chuyển đổi một Set thành một mảng và sau đó nối các phần tử của mảng thành một chuỗi bằng dấu phẩy
+      }
+      demKytukhacnhau(a);
+  </script>
+</body>
+</html>

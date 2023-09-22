@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <p>
+    <ol>
+    <li><input type="button" value="cafe" onclick="chon(this.value)"></li>
+    <li><input type="button" value="Cam vắt" onclick="chon(this.value)"></li>
+    <li><input type="button" value="Nước ép cà rốt" onclick="chon(this.value)"></li>
+    <li><input type="button" value="Nước ép cà chua" onclick="chon(this.value)"></li>
+    <li><input type="button" value="Nước lọc" onclick="chon(this.value)"></li>
+    <li><input type="button" value="Nước dừa" onclick="chon(this.value)"></li>
+    <li><input type="button" value="Thoát chọn món" onclick="check()"></li>
+    </ol>
+  <script>
+      let menu = ["Cafe","Cam vắt","Nước ép cà rốt","Nước ép cà chua","Nước lọc","Nước dừa"];
+      let price = [1,2,3,4,5,6];
+      let invoice = 0
+      function chon (param) {
+        for (let i = 0; i < menu.length; i++ ) {
+          if(param === menu[i]){
+            let num = parseInt(prompt("Bạn vừa chọn: " + menu[i] + " Đơn giá là: " + price[i] +"$." +" Vui lòng nhập số lượng muốn đặt"))
+            invoice += num*price[i]
+            console.log(invoice);
+            break;
+          }
+        }
+      }
+      function check(){
+        alert("Tổng tiền cần thanh toán là: " + invoice +"$")
+        invoice = 0
+        console.log(invoice);
+      }
+  </script>
+</body>
+</html>

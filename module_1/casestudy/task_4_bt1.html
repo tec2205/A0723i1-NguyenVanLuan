@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const input = prompt('Nhập Tên:');
+        function normalizeString(input) {
+            let result = '';
+            let isSpace = true;
+            for (let i = 0; i < input.length; i++) {
+                const c = input[i];
+                if (c === ' ') {
+                    isSpace = true;
+                } else {
+                    if (isSpace) {
+                        result += c.toUpperCase(); // chuyển thành chữ hoa nếu là chữ đầu sau khoảng trắng
+                    } else {
+                        result += c.toLowerCase(); // chuyển thành chữ thường nếu không là chữ đầu sau khoảng trắng
+                    }
+                    isSpace = false;
+                }
+            }
+            return result;
+        }
+        function findLongestWord(input) {
+            const words = input.split(' ');
+            let longestWord = '';
+            for (let i = 0; i < words.length; i++) {
+                const word = words[i];
+                if (word.length > longestWord.length) {
+                    longestWord = word;
+                }
+            }
+            return longestWord;
+        }
+        document.write('Tên trước khi chuẩn hóa: ' + input + '<br>');
+
+        const normalizedString = normalizeString(input);
+        document.write('Tên sau khi chuẩn hóa: ' + normalizedString + '<br>');
+
+        const longestWord = findLongestWord(input);
+        document.write('Từ dài nhất trong xâu: ' + longestWord + '<br>');
+    </script>
+</body>
+</html>
