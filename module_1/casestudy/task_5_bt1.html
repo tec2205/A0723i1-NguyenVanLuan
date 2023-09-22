@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    let m = parseInt(prompt("Nhập số hàng của ma trận:"));
+    let n = parseInt(prompt("Nhập số cột của ma trận:"));
+    let tongSoChan = tinhTongSoChan(m, n);
+    function tinhTongSoChan(m, n) {
+      let matrix = [];
+      let sum = 0;
+      for (let i = 0; i < m; i++) {
+        matrix[i] = [];
+        for (let j = 0; j < n; j++) {
+          matrix[i][j] = Math.floor(Math.random() * 100); // Tạo ma trận ngẫu nhiên
+          if (matrix[i][j] % 2 === 0) {
+            sum += matrix[i][j];
+          }
+        }
+      }
+      return sum;
+    }
+    document.write("Tổng các số chẵn trong ma trận " + m + "x" + n + " là: " + tongSoChan)
+  </script>
+</body>
+</html>

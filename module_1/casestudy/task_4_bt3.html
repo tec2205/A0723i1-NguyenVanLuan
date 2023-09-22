@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    function check() {
+      let xau1 = prompt("Nhập chuỗi thứ nhất:");
+      let xau2 = prompt("Nhập chuỗi thứ hai:");
+      let different = [];
+      for (let i = 0; i < xau1.length; i++) {
+        if (!different.includes(xau1[i])) { // includes phân biệt chữ hoa và chữ thường
+          different.push(xau1[i]);
+        }
+      }
+      for (let i = 0; i < xau2.length; i++) {
+        if (!different.includes(xau2[i])) {
+          different.push(xau2[i]);
+        }
+      }
+      document.write("Các ký tự khác nhau trong hai chuỗi là: ");
+      for (let i = 0; i < different.length; i++) {
+        document.write(different[i] + " ");
+      }
+    } check()
+  </script>
+</body>
+</html>
