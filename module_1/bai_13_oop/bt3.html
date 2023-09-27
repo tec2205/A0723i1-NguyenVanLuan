@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--bài ni e chịu e copy-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .phone {
+        border: 1px solid black;
+        width: 200px;
+        height: 400px;
+        margin: 10px;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        position: relative;
+    }
+    .phone:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    #container {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<body>
+<div id="container">
+    <div id="phone1" class="phone">
+        <div id="battery1">100%</div>
+        <button onclick="phone1.turnOn()">Bật điện thoại</button>
+        <button onclick="phone1.turnOff()">Tắt điện thoại</button>
+        <button onclick="phone1.sendMessage(phone2)">Gửi tin nhắn</button>
+        <div id="messages1"></div>
+    </div>
+    <div id="phone2" class="phone">
+        <div id="battery2">100%</div>
+        <button onclick="phone2.turnOn()">Bật điện thoại</button>
+        <button onclick="phone2.turnOff()">Tắt điện thoại</button>
+        <button onclick="phone2.sendMessage(phone1)">Gửi tin nhắn</button>
+        <div id="messages2"></div>
+    </div>
+</div>
+<script>
+    class Phone {
+        constructor(id, batteryId, messagesId) {
+            this.battery = 100;
+            this.isOn = false;
+            this.sentMessages = [];
+            this.receivedMessages = [];
+            this.id = id;
+            this.batteryId = batteryId;
+            this.messagesId = messagesId;
+        }
+        turnOn() {
+            this.isOn = true;
+            document.getElementById(this.id).style.backgroundColor = "blue";
+        }
+        turnOff() {
+            this.isOn = false;
+            document.getElementById(this.id).style.backgroundColor = "red";
+        }
+        useBattery() {
+            if (this.battery > 0) {
+                this.battery--;
+                document.getElementById(this.batteryId).innerText = this.battery + "%";
+            }
+        }
+        sendMessage(phone) {
+            if (this.isOn) {
+                let message = prompt("Nhập vào tin nhắn muốn gửi:");
+                this.sentMessages.push(message);
+                phone.receiveMessage(message);
+                this.useBattery();
+                document.getElementById(this.messagesId).innerText += "Đã gửi: " + message + "\n";
+            }
+        }
+        receiveMessage(message) {
+            if (this.isOn) {
+                this.receivedMessages.push(message);
+                this.useBattery();
+                document.getElementById(this.messagesId).innerText += "Đã nhận: " + message + "\n";
+            }
+        }
+    }
+    let phone1 = new Phone("phone1", "battery1", "messages1");
+    let phone2 = new Phone("phone2", "battery2", "messages2");
+</script>
+</body>
+</html>
